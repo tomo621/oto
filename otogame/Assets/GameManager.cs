@@ -19,11 +19,12 @@ public class GameManager : MonoBehaviour
     public float judgeLineY = -3f;
 
     [Header("★ランダム譜面設定")]
-    public int totalNotes = 100;
-    public float noteInterval = 0.6f;
+    public float noteInterval = 0.6f;  // ノーツが降ってくる間隔
 
     [HideInInspector]
     public NoteData[] scoreData;
+    [HideInInspector]
+    public int totalNotes = 0; // ★インスペクターから隠して、自動計算に変更！
 
     [Header("ゲーム状態")]
     public int score = 0;
@@ -51,6 +52,18 @@ public class GameManager : MonoBehaviour
         activeNotes.Clear();
         judgeText = "";
 
+        // 
+        float songLength = 60f; // 曲がない場合は仮に60秒
+        if (bgmSource != null && bgmSource.clip != null)
+        {
+            songLength = bgmSource.clip.length; // 実際のBGMの長さを取得
+        }
+
+        // 曲が終わるまでに何個のノーツが置けるか計算
+        totalNotes = Mathf.FloorToInt((songLength - 2f) / noteInterval);
+        if (totalNotes < 0) totalNotes = 0;
+
+        // 計算した数だけノーツを生成
         scoreData = new NoteData[totalNotes];
         for (int i = 0; i < totalNotes; i++)
         {
@@ -169,7 +182,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     public void MissHitFromNote()
     {
         SetJudgeAction("MISS...", Color.gray);
@@ -202,11 +214,28 @@ public class GameManager : MonoBehaviour
                 GUI.skin.label.fontSize = 55;
                 GUI.skin.label.alignment = TextAnchor.MiddleCenter;
                 GUI.skin.label.normal.textColor = judgeColor;
-                GUI.Label(new Rect(Screen.width / 2 - 200, Screen.height / 2 - 50, 400, 100), judgeText);
+                GUI.Label(new Rect(Screen.width / 2 - 200, Screen.height / 2 - 100, 400, 100), judgeText);
+                GUI.skin.label.alignment = TextAnchor.UpperLeft;
             }
-
         }
+        else
+        {
+            string endText = (life > 0) ? "GAME CLEAR!" : "GAME OVER";
+            Color endColor = (life > 0) ? Color.yellow : Color.red;
 
+            GUI.skin.label.fontSize = 60;
+            GUI.skin.label.normal.textColor = endColor;
+            GUI.Label(new Rect(Screen.width / 2 - 200, Screen.height / 2 - 130, 400, 100), endText);
+
+            GUI.skin.label.fontSize = 40;
+            GUI.skin.label.normal.textColor = Color.white;
+            GUI.Label(new Rect(Screen.width / 2 - 200, Screen.height / 2 - 40, 400, 100), "FINAL SCORE: " + score);
+
+            GUI.skin.button.fontSize = 20;
+            if (GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 + 50, 200, 50), "RETRY"))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
     }
-
 }

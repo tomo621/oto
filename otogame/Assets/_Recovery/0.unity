@@ -350,8 +350,8 @@ GameObject:
   m_Component:
   - component: {fileID: 686356575}
   - component: {fileID: 686356574}
-  - component: {fileID: 686356577}
   - component: {fileID: 686356576}
+  - component: {fileID: 686356577}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -376,9 +376,9 @@ MonoBehaviour:
   notePrefab: {fileID: 6857257195535707687, guid: e5104e706c969a84ba09c5ccbfbb68af, type: 3}
   noteSpeed: 5
   judgeLineY: -3
+  totalNotes: 40
   noteInterval: 0.6
   scoreData: []
-  totalNotes: 100
   score: 0
   combo: 0
   life: 5
@@ -412,7 +412,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 6fc60f727f8b1794bb168c47ea91ea11, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
