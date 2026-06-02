@@ -18,13 +18,13 @@ public class GameManager : MonoBehaviour
     public float noteSpeed = 5f;
     public float judgeLineY = -3f;
 
-    [Header("★ランダム譜面設定")]
+    [Header("ランダム譜面設定")]
     public float noteInterval = 0.6f;  // ノーツが降ってくる間隔
 
     [HideInInspector]
     public NoteData[] scoreData;
     [HideInInspector]
-    public int totalNotes = 0; // ★インスペクターから隠して、自動計算に変更！
+    public int totalNotes = 0; // インスペクターから隠して、自動計算に変更
 
     [Header("ゲーム状態")]
     public int score = 0;
@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
 
         songPosition = (float)(AudioSettings.dspTime - dspStartTime);
 
-        // BGMが最後まで再生されたら自動でゲームクリア！
+        // BGMが最後まで再生されたら自動でゲームクリア
         if (bgmSource != null && bgmSource.clip != null)
         {
             if (songPosition >= bgmSource.clip.length)

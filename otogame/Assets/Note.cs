@@ -4,7 +4,7 @@ public class Note : MonoBehaviour
 {
     public GameManager manager;
     public float targetTime;
-    public int lane; //自分がどのレーン（0〜3）か
+    public int lane;
 
     void Update()
     {
@@ -19,7 +19,7 @@ public class Note : MonoBehaviour
         // 計算したXとYで位置を更新
         transform.position = new Vector3(x, y, 0);
 
-        // 【見逃し判定】
+        // 見逃し判定
         if (manager.songPosition > targetTime + 0.3f)
         {
             manager.MissHitFromNote();

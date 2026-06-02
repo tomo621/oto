@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ktc\\Documents\\Unity\\25a31a0053\\oto\\otogame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B25DE71C-5354-8EA4-772F-B534A9D78414}|Assembly-CSharp.csproj|c:\\users\\ktc\\documents\\unity\\25a31a0053\\oto\\otogame\\assets\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B25DE71C-5354-8EA4-772F-B534A9D78414}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B25DE71C-5354-8EA4-772F-B534A9D78414}|Assembly-CSharp.csproj|c:\\users\\ktc\\documents\\unity\\25a31a0053\\oto\\otogame\\assets\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B25DE71C-5354-8EA4-772F-B534A9D78414}|Assembly-CSharp.csproj|solutionrelative:assets\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\ktc\\Documents\\Unity\\25a31a0053\\oto\\otogame\\Assets\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\GameManager.cs",
+              "ToolTip": "C:\\Users\\ktc\\Documents\\Unity\\25a31a0053\\oto\\otogame\\Assets\\GameManager.cs",
+              "RelativeToolTip": "Assets\\GameManager.cs",
+              "ViewState": "AgIAANMAAAAAAAAAAAAgwFQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:57:03.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Note.cs",
+              "DocumentMoniker": "C:\\Users\\ktc\\Documents\\Unity\\25a31a0053\\oto\\otogame\\Assets\\Note.cs",
+              "RelativeDocumentMoniker": "Assets\\Note.cs",
+              "ToolTip": "C:\\Users\\ktc\\Documents\\Unity\\25a31a0053\\oto\\otogame\\Assets\\Note.cs",
+              "RelativeToolTip": "Assets\\Note.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:56:08.798Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
